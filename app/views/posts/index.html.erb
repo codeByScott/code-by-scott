@@ -1,19 +1,20 @@
-<h1>My Latest Posts</h1>
+<!-- Index Layout -->
+<div class="container">
+  <h1>My Latest Posts</h1>
 
-<% @posts.each do |post| %>
-  <h2><%= post.title %></h2>
-  <% if post.image.file? && post.image.present? %>
-    <%= image_tag post.image.url(:medium) %>
+  <% @posts.each do |post| %>
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+            <h2 class="card-title"><%= post.title %></h2>
+            <p><%= post.body %></p>
+          </div>
+          <div class="card-action">
+            <%= link_to 'Read more', post %>
+          </div>
+        </div>
+      </div>
+    </div>
   <% end %>
-  <p><%= post.body %></p>
-
-  <%= link_to 'Show', post %>
-  <%= link_to 'Edit', edit_post_path(post) %>
-  <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-
-  <hr>
-<% end %>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+</div>
