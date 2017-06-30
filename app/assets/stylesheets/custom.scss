@@ -17,9 +17,14 @@ main {
 
 // Index Cards
 .card {
-  // height: 200px !important;
-}
-
-h2.card-title {
-  margin-top: .75rem;
+  height: 300px !important;
+  .card-title {
+    h2 {
+      margin-top: .75rem;
+    }
+  }
+  .card-date {
+    color: #d3d3d3;
+    font-size: 0.9rem;
+  }
 }

@@ -2,6 +2,7 @@
   <div class="col m8 offset-m2">
 
     <h1><%= @post.title %></h1>
+    <time datetime="<%= @post.created_at %>"><%= @post.created_at.strftime("%b %d, %Y") %> </time>
     <% if @post.image.file? && @post.image.present? %>
       <%= image_tag @post.image.url, width: "100%" %>
     <% end %>
