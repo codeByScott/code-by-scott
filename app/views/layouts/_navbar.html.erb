@@ -4,12 +4,15 @@
       <div class="container">
         <%= link_to "Code by Scott", root_path, class: "brand-logo" %>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><%= link_to "Articles", posts_path %></li>
+          <li><a href="#">Projects</a></li>
+
           <% if current_user %>
           <li><%= link_to "Create Post", new_post_path %></li>
           <% end %>
-          
+
           <% if !current_user %>
-            <li><%= link_to "Log in", new_user_session_path %></li>
+            <li><%= link_to "Sign in / Sign up", new_user_session_path %></li>
           <% elsif current_user %>
             <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
           <% end %>
