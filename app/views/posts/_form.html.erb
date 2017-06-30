@@ -21,6 +21,14 @@
     <%= f.text_area :body, class: "materialize-textarea" %>
   </div>
 
+  <div class="file-field input-field">
+    <div class="btn">
+      <span>Upload Image</span>
+      <%= f.file_field :image %>
+    </div>
+    <input class="file-path validate" type="text"/>
+  </div>
+
   <div class="actions">
     <%= f.submit class: "btn btn-waves btn-light" %>
   </div>

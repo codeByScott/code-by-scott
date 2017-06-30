@@ -1,24 +1,18 @@
-<h1>Posts</h1>
+<h1>My Latest Posts</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<% @posts.each do |post| %>
+  <h2><%= post.title %></h2>
+  <% if post.image.file? && post.image.present? %>
+    <%= image_tag post.image.url(:medium) %>
+  <% end %>
+  <p><%= post.body %></p>
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.body %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <%= link_to 'Show', post %>
+  <%= link_to 'Edit', edit_post_path(post) %>
+  <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+  <hr>
+<% end %>
 
 <br>
 

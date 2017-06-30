@@ -20,6 +20,9 @@ gem 'material_icons'
 
 gem 'devise', '~> 4.3'
 
+# Uploading images
+gem 'paperclip', '~> 5.1'
+
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
