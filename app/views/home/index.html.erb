@@ -1,10 +1,11 @@
 <div class="row">
-  <div class="col s12 m6">
+  <div class="col s12 m5">
     <h2 class="section-title about">Hi, my name is Scott.</h2>
     <p>
       I'm a Ruby on Rails developer that enjoys working with other technologies
       as well. I have lived around the globe. You can currently find me in
-      <strong>Sasebo, Japan</strong>.
+      <strong>Sasebo, Japan</strong> but I'm relocating to the United States
+      November 2017.
     </p>
     <p>
       I am very interested in working with a great team of other like minded
@@ -20,7 +21,8 @@
       and share my work on <a href="https://github.com/codeByScott">GitHub</a>.
     </p>
   </div>
-  <div class="col s12 m6">
+
+  <div class="col s12 m6 offset-m1">
     <h2 class="section-title">Recent Posts</h2>
     <% @posts.each do |post| %>
       <h3 class="post-title"><%= link_to post.title, post_path(post) %></h3>
