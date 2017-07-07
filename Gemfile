@@ -18,6 +18,10 @@ gem 'sass-rails', '~> 5.0'
 gem 'materialize-sass'
 gem 'material_icons'
 
+# Markdown and Syntax Highlighting
+gem 'pygments.rb', '~> 1.1', '>= 1.1.2'
+gem 'redcarpet', '~> 3.4'
+
 gem 'devise', '~> 4.3'
 
 # Uploading images
