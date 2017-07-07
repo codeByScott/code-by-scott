@@ -8,7 +8,9 @@
       <div class="col s12 m6">
         <div class="card">
           <div class="card-content">
-            <h2 class="card-title"><%= post.title %></h2>
+            <h2 class="card-title">
+              <%= link_to post.title, post_path(post) %>
+            </h2>
             <time datetime="<%= post.created_at %>" class="card-date"><%= post.created_at.strftime("%b %d, %Y") %></time>
             <p><%= post.body %></p>
           </div>

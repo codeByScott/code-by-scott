@@ -2,6 +2,11 @@
 
 h1 {
   font-size: 2.5rem;
+  color: #276184;
+}
+
+a {
+  color: #94ba65;
 }
 
 // Sticky Footer
@@ -15,16 +20,76 @@ main {
   flex: 1 0 auto;
 }
 
+.btn {
+  background-color: #276184;
+}
+
+.btn:hover {
+  background-color: #94ba65;
+}
+
+.btn--signup {
+  color: #276184;
+}
+
+.page-title {
+  color: #276184;
+  font-size: 2rem;
+}
+
 // Index Cards
 .card {
-  height: 300px !important;
-  .card-title {
-    h2 {
-      margin-top: .75rem;
-    }
+  height: auto;
+  color: #3e3e3e;
+}
+
+.card-title {
+  h2 {
+    margin-top: .75rem;
   }
-  .card-date {
-    color: #d3d3d3;
-    font-size: 0.9rem;
+  a {
+    color: rgba(42, 66, 78, 0.8);
   }
+
+  a:hover {
+    color: #94ba65;
+  }
+}
+
+.card-date {
+  color: #d3d3d3;
+  font-size: 0.9rem;
+}
+
+.card
+.card-action
+a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+  color: rgba(76, 175, 80, 0.8);
+}
+
+nav {
+  background-color: #276184;
+}
+
+nav .brand-logo {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.75rem;
+  font-weight: 100;
+}
+
+nav ul a {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 100;
+}
+
+nav ul a:hover {
+  color: #fff;
+}
+
+.page-footer {
+  background-color: #276184;
+}
+
+.page-footer .footer-copyright {
+  font-weight: 100;
 }
