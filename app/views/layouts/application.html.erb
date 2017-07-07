@@ -13,24 +13,26 @@
       <%= render "layouts/navbar" %>
     </header>
 
-  <main>
-    <div class="container">
-      <% if notice %>
-        <script type="text/javascript">
-          Materialize.toast('<%= notice %>', 4000)
-        </script>
-      <% end %>
+    <main>
+      <div class="container">
+        <% if notice %>
+          <script type="text/javascript">
+            Materialize.toast('<%= notice %>', 4000)
+          </script>
+        <% end %>
 
-      <% if alert %>
-        <script type="text/javascript">
-          Materialize.toast('<%= alert %>', 4000)
-        </script>
-      <% end %>
-    </div><!-- /.container -->
-      <%= yield %>
-  </main>
+        <% if alert %>
+          <script type="text/javascript">
+            Materialize.toast('<%= alert %>', 4000)
+          </script>
+        <% end %>
+      </div><!-- /.container -->
 
-  <%= render "layouts/footer" %>
+        <%= yield %>
+    </main>
 
+    <%= render "layouts/footer" %>
+
+    <script id="dsq-count-scr" src="//code-by-scott.disqus.com/count.js" async></script>
   </body>
 </html>

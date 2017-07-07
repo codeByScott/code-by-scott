@@ -9,6 +9,8 @@
       <%= image_tag @post.image.url, width: "100%" %>
     <% end %>
     <p><%= markdown(@post.body) %></p><br />
+    
+    <%= render 'disqus' %>
 
     <% if current_user == @post.user %>
       <%= link_to 'Edit', edit_post_path(@post) %> |
