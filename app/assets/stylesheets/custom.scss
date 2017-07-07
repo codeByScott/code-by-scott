@@ -9,6 +9,24 @@ a {
   color: #94ba65;
 }
 
+h2.section-title {
+  color: #276184;
+}
+
+h3.post-title {
+  font-size: 1.75rem;
+  color: #5f5959;
+  margin-bottom: 0.25rem;
+}
+
+h3.post-title a {
+  color: #5f5959;
+}
+
+h3.post-title a:hover {
+  color: #94ba65;
+}
+
 // Sticky Footer
 body {
   display: flex;
@@ -18,6 +36,12 @@ body {
 
 main {
   flex: 1 0 auto;
+  margin: 2.75em;
+}
+
+.post-time-ago-in-words {
+  color: #d3d3d3;
+  font-size: 0.9rem;
 }
 
 .btn {

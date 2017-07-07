@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col m6">
+    <h2 class="section-title about">About Me</h2>
+    <p>Hello there. I'm Scott, a Ruby on Rails developer currently living in <strong>Sasebo, Japan</strong>.</p>
+    <p>I am currently seeking remote employment as web developer.</p>
+  </div>
+  <div class="col m6">
+    <h2 class="section-title">Recent Posts</h2>
+    <% @posts.each do |post| %>
+      <h3 class="post-title"><%= link_to post.title, post_path(post) %></h3>
+      <time datetime="<%= post.created_at %>" class="post-time-ago-in-words">Posted <%= time_ago_in_words(post.created_at) %> ago</time>
+      <p><%= truncate(post.body, length: 250, separator: " ") %></p>
+    <% end %>
+  </div>
+</div>
