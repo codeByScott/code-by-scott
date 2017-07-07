@@ -2,7 +2,9 @@
   <div class="col m12 l8 offset-l2">
 
     <h1><%= @post.title %></h1>
-    <time datetime="<%= @post.created_at %>"><%= @post.created_at.strftime("%b %d, %Y") %> </time>
+    <span>Published </span>
+    <time datetime="<%= @post.created_at %>"><strong><%= @post.created_at.strftime("%b %d, %Y") %></strong> </time>
+    <span>by Scott Christensen</span>
     <% if @post.image.file? && @post.image.present? %>
       <%= image_tag @post.image.url, width: "100%" %>
     <% end %>

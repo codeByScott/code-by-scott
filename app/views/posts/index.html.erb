@@ -9,7 +9,7 @@
         <div class="card">
           <div class="card-content">
             <h2 class="card-title">
-              <%= link_to truncate(post.title, length: 50), post_path(post) %>
+              <%= link_to truncate(post.title, length: 40), post_path(post) %>
             </h2>
             <time datetime="<%= post.created_at %>" class="card-date"><%= post.created_at.strftime("%b %d, %Y") %></time>
             <p><%= truncate(post.body, length: 250, separator: " ") %></p>
