@@ -121,3 +121,9 @@ nav ul a:hover {
 .page-footer .footer-copyright {
   font-weight: 100;
 }
+
+@media only screen and (min-width: 993px) {
+  .container {
+      width: 90%;
+  }
+}
