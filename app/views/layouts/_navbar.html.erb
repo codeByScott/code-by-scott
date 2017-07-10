@@ -2,29 +2,18 @@
   <div class="nav-wrapper">
     <div class="container">
       <%= link_to "Code by Scott", root_path, class: "brand-logo" %>
-      <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
 
+      <a href="#" data-activates="mobile-nav" class="button-collapse">
+        <i class="material-icons">menu</i>
+      </a>
+      
       <ul class="right hide-on-med-and-down">
-        <li><%= link_to "Blog", posts_path %></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact Me</a></li>
-
-        <% if current_user %>
-          <li><%= link_to "New Post", new_post_path %></li>
-          <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-        <% end %>
+        <%= render "layouts/menu" %>
       </ul>
-    </div>
-
+    </div><!-- /.container -->
 
     <ul class="side-nav" id="mobile-nav">
-      <li><%= link_to "Blog", posts_path %></li>
-      <li><a href="#">Projects</a></li>
-      <% if current_user %>
-        <li><%= link_to "New Post", new_post_path %></li>
-        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-      <% end %>
+      <%= render "layouts/menu" %>
     </ul>
-
   </div><!-- /.nav-wrapper -->
 </nav>

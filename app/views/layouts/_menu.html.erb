@@ -1,0 +1,8 @@
+<li><%= link_to "Blog", posts_path %></li>
+<!-- <li><a href="#">Projects</a></li> -->
+<li><%= link_to "Message me", new_contact_path %></li>
+
+<% if current_user %>
+  <li><%= link_to "New Post", new_post_path %></li>
+  <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+<% end %>

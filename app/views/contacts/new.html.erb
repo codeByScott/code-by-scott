@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col m8 offset-m2">
+      <h1 id="page_title">Send me a message!</h1>
+
+      <%= form_for @contact do |f| %>
+
+        <div class="input-field">
+          <%= f.label :name %><br>
+          <%= f.text_field :name, required: true, class: "validate" %>
+        </div>
+
+        <br>
+
+        <div class="input-field">
+          <%= f.label :email %><br>
+          <%= f.email_field :email, required: true, class: "validate" %>
+        </div>
+
+        <div class="input-field">
+          <%= f.label :message %><br>
+          <%= f.text_area :message, as: :text, required: true, class: "materialize-textarea validate" %>
+        </div>
+
+        <div class="hidden">
+          <%= f.label :nickname %><br>
+          <%= f.text_field :nickname, hint: 'leave this field blank' %>
+        </div>
+
+        <%= f.submit 'Send Message', class: "btn" %>
+      <% end %>
+    </div>
+  </div>
+</div>

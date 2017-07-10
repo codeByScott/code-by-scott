@@ -24,6 +24,9 @@ gem 'redcarpet', '~> 3.4'
 
 gem 'devise', '~> 4.3'
 
+# Contact form
+gem 'mail_form', '~> 1.7'
+
 # Uploading images
 gem 'paperclip', '~> 5.1'
 
