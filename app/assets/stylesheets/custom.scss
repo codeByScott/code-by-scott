@@ -131,3 +131,7 @@ nav ul a:hover {
 .hidden {
   display: none;
 }
+
+p::selection {
+  background: #fff198;
+}
