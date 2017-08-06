@@ -1,40 +1,37 @@
-<div class="col m6 offset-m3">
-  <div class="container">
-    <div class="row">
-      <h2 class="page-title">Please, authenticate yourself</h2>
-      <div class="z-depth-3 card hoverable" style="padding: 20px 60px;">
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: "col s12") do |f| %>
-          <div class="input-field">
-            <%= f.label :email %><br />
-            <%= f.email_field :email, autofocus: true %>
-          </div>
-
-          <div class="input-field">
-            <%= f.label :password %><br />
-            <%= f.password_field :password, autocomplete: "off" %>
-          </div>
-            <% if devise_mapping.rememberable? -%>
-              <div class="left">
-                <%= f.check_box :remember_me %>
-                <%= f.label :remember_me %>
-              </div>
-            <% end -%>
-
-              <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-                <%= link_to "Forgot your password?", new_password_path(resource_name), class: "right" %><br />
-              <% end -%>
-
-          <div class="row section actions">
-            <%= f.submit "Log in", class: "col s8 offset-s2 btn btn-large" %>
-          </div>
-        <% end %>
-        <div class="row section center-align">
-          <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-            <%= link_to "Sign up", new_registration_path(resource_name), class: "btn--signup" %><br />
-          <% end -%>
+<div class="row">
+  <div class="col m6 offset-m3">
+    <h2 class="page-title">Please, authenticate yourself</h2>
+    <div class="z-depth-3 card hoverable" style="padding: 20px 60px;">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="input-field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true %>
         </div>
-        <br />
-      </div><!-- /.card -->
-    </div>
+
+        <div class="input-field">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+          <% if devise_mapping.rememberable? -%>
+            <div class="left">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
+          <% end -%>
+
+            <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+              <%= link_to "Forgot your password?", new_password_path(resource_name), class: "right" %><br />
+            <% end -%>
+        <br>
+        <div class="row section actions">
+          <%= f.submit "Log in", class: "col s8 offset-s2 btn btn-large" %>
+        </div>
+      <% end %>
+      <div class="row section center-align">
+        <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+          <%= link_to "Sign up", new_registration_path(resource_name), class: "btn--signup" %><br />
+        <% end -%>
+      </div>
+    </div><!-- /.card -->
   </div>
 </div>
