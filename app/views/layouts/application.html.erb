@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Codebyscott</title>
+    <title>Code by Scott<%= if content_for? :title then ": " + yield(:title) end %></title>
+    <meta name='description'
+          content='<%= yield_meta_tag(:description, 'Scott Christensen is a web application developer available for full-time remote work. Scott has experience with Ruby, JavaScript, HTML5, and CSS3.') %>' />
+    <meta name='keywords'
+          content='<%= yield_meta_tag(:keywords, 'scott christensen, ruby on rails, developer, ruby, javascript, html5, css3') %>' />
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>

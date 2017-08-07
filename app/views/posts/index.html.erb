@@ -1,27 +1,24 @@
-<!-- Index Layout -->
-<!-- <div class="container"> -->
-  <h1>My Latest Posts</h1>
+<% # Meta information for the <head> section %>
+<% title "Latest Posts" %>
+<% meta_tag :description, "The Tech blog of Scott Christensen. Scott writes about what he is learning, things he finds interesting, and solutions to problems." %>
 
+<h1>My Latest Posts</h1>
 
-  <div class="row">
-    <% @posts.each do |post| %>
-      <div class="col s12 m6 l4">
-        <div class="card">
-          <div class="card-content">
-            <h2 class="card-title">
-              <%= link_to truncate(post.title, length: 40), post_path(post) %>
-            </h2>
-            <time datetime="<%= post.created_at %>" class="card-date"><%= post.created_at.strftime("%b %d, %Y") %></time>
-            <p><%= truncate(post.body, length: 250, separator: " ") %></p>
-          </div>
-          <div class="card-action">
-            <%= link_to 'Read more', post %>
-          </div>
+<div class="row">
+  <% @posts.each do |post| %>
+    <div class="col s12 m6 l4">
+      <div class="card">
+        <div class="card-content">
+          <h2 class="card-title">
+            <%= link_to truncate(post.title, length: 40), post_path(post) %>
+          </h2>
+          <time datetime="<%= post.created_at %>" class="card-date"><%= post.created_at.strftime("%b %d, %Y") %></time>
+          <p><%= truncate(post.body, length: 250, separator: " ") %></p>
+        </div>
+        <div class="card-action">
+          <%= link_to 'Read more', post %>
         </div>
       </div>
-    <% end %>
-  </div>
-
-
-
-<!-- </div> -->
+    </div>
+  <% end %>
+</div>
