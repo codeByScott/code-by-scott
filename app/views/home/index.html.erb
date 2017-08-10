@@ -31,7 +31,7 @@
     <% @posts.each do |post| %>
       <h3 class="post-title"><%= link_to post.title, post_path(post) %></h3>
       <time datetime="<%= post.created_at %>" class="post-time-ago-in-words">Posted <%= time_ago_in_words(post.created_at) %> ago</time>
-      <p><%= truncate(post.body, length: 250, separator: " ") %></p>
+      <p><%= post_snippet(post) %></p>
     <% end %>
   </div>
 </div>
