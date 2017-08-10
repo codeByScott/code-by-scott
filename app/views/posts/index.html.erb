@@ -13,7 +13,8 @@
             <%= link_to truncate(post.title, length: 40), post_path(post) %>
           </h2>
           <time datetime="<%= post.created_at %>" class="card-date"><%= post.created_at.strftime("%b %d, %Y") %></time>
-          <p><%= truncate(post.body, length: 250, separator: " ") %></p>
+          <p><%= post_snippet(post) %></p>
+
         </div>
         <div class="card-action">
           <%= link_to 'Read more', post %>
