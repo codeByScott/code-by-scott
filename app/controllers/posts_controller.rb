@@ -5,12 +5,13 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.order("created_at DESC")
+    @posts = Post.where(published: true).order("created_at DESC")
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
+    # show the post only if it is published.
   end
 
   # GET /posts/new
